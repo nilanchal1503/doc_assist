@@ -1,7 +1,11 @@
 Your all-in-one GenAI-powered research companion that can:
+
 Parse and summarize uploaded documents
+
 Answer custom questions about them
+
 Generate logic-based quiz questions
+
 Evaluate your answers with feedback
 
 
