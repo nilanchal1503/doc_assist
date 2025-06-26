@@ -39,6 +39,7 @@ Evaluate your answers with feedback
 **concept of working of m model**
 
 🔁 **Flow Example: "Summarize + Ask"**
+
 User uploads a file → extract_text() reads it
 
 Text gets summarized → generate_summary()
@@ -64,6 +65,7 @@ Session state keeps the full back-and-forth chat memory
 
 
 🧩 **Flow Example: "Challenge Me"**
+
 App sends context (first 5 chunks) to LLM → generates MCQ-style questions
 
 User answers → evaluation prompt is sent
@@ -99,55 +101,11 @@ streamlit run app.py
 
 
 
-                      ┌────────────────────────────┐
-                      │     📄 Uploaded Document    │
-                      └────────────┬───────────────┘
-                                   │
-                        Text Extraction (parser.py)
-                                   │
-                        ┌──────────▼───────────┐
-                        │ generate_summary()   │ ← Summarizer (summarizer.py)
-                        └──────────────────────┘
-                                   │
-        ┌────────────────────────────────────────────────────┐
-        │                                                    │
-        ▼                                                    ▼
- Q&A Mode (qa_engine.py)                            Challenge Mode (challenge_engine.py)
-        │                                                    │
-  Split into chunks                                Extract 5 chunks
-  Build prompt w/ chat history                     Prompt LLM for questions
-  Retrieve top-k similar context                   Let user answer → Evaluate
-  Send to Mistral (OpenRouter)                     Soft-check answer grounding
-        │                                                    │
-        ▼                                                    ▼
- Return answer + source                          Return feedback
-        │
- Silent plausibility checker (validator.py)
+                    
 
 
 
 
-
-in theo , explained above 
-
-smart-research-assistant/
-│
-├── app.py                         # Main Streamlit UI logic
-│
-├── backend/
-│   ├── parser.py                  # Extracts text from PDFs and text files
-│   ├── summarizer.py              # Summarizes text using OpenRouter
-│   ├── qa_engine.py               # Handles Q&A using document + chat history
-│   └── challenge_engine.py        # Generates and evaluates logic questions
-│
-├── utils/
-│   ├── retrieval.py               # Chunk splitter and context retriever
-│   └── validator.py               # Checks LLM outputs for hallucination
-│
-├── .streamlit/
-│   └── secrets.toml               # (optional) API key storage
-│
-└── requirements.txt               # Python dependencies
 
 
 Built by Nilanchal Upadhyay
