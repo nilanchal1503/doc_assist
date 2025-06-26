@@ -13,15 +13,25 @@ Evaluate your answers with feedback
 
 
 **This is a strucutre for my code.**
+
  Layer	                         Component	                                      Purpose
+ 
 📁 app.py	                    Streamlit UI	                                Main frontend, controls sidebar, user input, layout
+
 📁 backend/parser.py	        extract_text()                               	Reads and extracts raw text from uploaded PDFs or .txt
+
 📁 backend/summarizer.py	    generate_summary()	                            Sends raw doc to LLM to return TL;DR-style summary
+
 📁 backend/qa_engine.py	        answer_question()                            	Handles Q&A from doc using FAISS + LLM prompt
+
 📁 backend/challenge_engine.py	generate_questions() / evaluate_answer()	    Quiz generator and feedback engine
+
 📁 utils/retrieval.py	        split_text(), build_faiss_index(), search_top_k()    	Vector-based chunk search logic
+
 📁 utils/validator.py	        is_answer_plausible()	                         Checks how grounded a response is in context (using difflib)
+
 📦 Model API	                Mistral-7B via OpenRouter	                     Handles summarization, question answering, and evaluation
+
 
 
 
