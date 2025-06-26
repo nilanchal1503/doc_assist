@@ -12,7 +12,7 @@ Evaluate your answers with feedback
 
 
 
-*This is a strucutre for my code.*
+**This is a strucutre for my code.**
  Layer	                         Component	                                      Purpose
 📁 app.py	                    Streamlit UI	                                Main frontend, controls sidebar, user input, layout
 📁 backend/parser.py	        extract_text()                               	Reads and extracts raw text from uploaded PDFs or .txt
@@ -26,9 +26,9 @@ Evaluate your answers with feedback
 
 
 
-*concept of working of m model* 
+**concept of working of m model**
 
-🔁 *Flow Example: "Summarize + Ask"*
+🔁 **Flow Example: "Summarize + Ask"**
 User uploads a file → extract_text() reads it
 
 Text gets summarized → generate_summary()
@@ -53,7 +53,7 @@ Session state keeps the full back-and-forth chat memory
 
 
 
-🧩 *Flow Example: "Challenge Me"*
+🧩 **Flow Example: "Challenge Me"**
 App sends context (first 5 chunks) to LLM → generates MCQ-style questions
 
 User answers → evaluation prompt is sent
@@ -66,7 +66,7 @@ Validator soft-checks whether that feedback matches context
 
 Setup Instructions
 Create and activate a virtual environment
-# (Python 3.11.9 recommended)
+**(Python 3.11.9 recommended)**
 python -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate on Windows
 
