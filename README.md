@@ -1,11 +1,7 @@
 Your all-in-one GenAI-powered research companion that can:
-
 Parse and summarize uploaded documents
-
 Answer custom questions about them
-
 Generate logic-based quiz questions
-
 Evaluate your answers with feedback
 
 
@@ -65,10 +61,17 @@ Validator soft-checks whether that feedback matches context
 
 
 Setup Instructions
+
 Create and activate a virtual environment
+
 **(Python 3.11.9 recommended)**
+
 python -m venv venv
+
 source venv/bin/activate  # or venv\Scripts\activate on Windows
+
+
+
 
 
 Install required dependencies
