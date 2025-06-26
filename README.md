@@ -9,7 +9,7 @@ Generate logic-based quiz questions
 Evaluate your answers with feedback
 
 
-
+# 
 
 
 **This is a strucutre for my code.**
@@ -34,7 +34,7 @@ Evaluate your answers with feedback
 
 
 
-
+# 
 
 **concept of working of m model**
 
@@ -87,12 +87,11 @@ python -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate on Windows
 
 
-
-
-
 Install required dependencies
 pip install -r requirements.txt
 
+
+#
 
 Run the app
 streamlit run app.py
