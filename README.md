@@ -36,7 +36,7 @@ Evaluate your answers with feedback
 
 # 
 
-**concept of working of m model**
+# Concept of working of m model
 
 🔁 **Flow Example: "Summarize + Ask"**
 
@@ -99,8 +99,7 @@ streamlit run app.py
 
 
 
-
-                    
+#               
 
 
 
